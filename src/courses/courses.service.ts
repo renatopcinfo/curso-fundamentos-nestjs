@@ -27,6 +27,8 @@ export class CoursesService {
         HttpStatus.NOT_FOUND,
       );
     }
+
+    return course;
   }
 
   create(createCourseDto: any) {
