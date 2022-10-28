@@ -22,7 +22,10 @@ describe('CoursesService', () => {
         CoursesService,
         { provide: Connection, useValue: {} },
         // eslint-disable-next-line prettier/prettier
-        {provide: getRepositoryToken(Course), useValue: createMockRepository() },
+        {
+          provide: getRepositoryToken(Course),
+          useValue: createMockRepository(),
+        },
         { provide: getRepositoryToken(Tag), useValue: createMockRepository() },
       ],
     }).compile();
